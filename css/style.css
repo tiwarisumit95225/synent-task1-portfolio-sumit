@@ -28,11 +28,12 @@ h2 {
 
 p {
     font-size: 1.1rem;
-    max-width: 700px;
+
 }
 
 nav {
     position: fixed;
+    z-index: 100;
     top: 0;
     width: 100%;
     padding: 20px 10%;
@@ -188,18 +189,23 @@ nav a:hover{
 
 .section-title{
     text-align:center;
-    margin-bottom:60px;
+    margin-bottom:70px;
 }
 
 .section-title h2{
-    font-size:2.5rem;
-    margin-bottom:10px;
+    font-size:3rem;
+    color:#38bdf8;
+    margin-bottom:8px;
 }
+
 
 .section-title p{
     color:#94a3b8;
+    font-size:1.15rem;
+    text-align:center;
+    max-width:none;
+    margin:0 auto;
 }
-
 .achievement-card{
     display:flex;
     align-items:center;
@@ -302,4 +308,87 @@ nav a:hover{
 
 #projectImage{
     cursor:pointer;
+}
+/* Projects Section */
+
+.projects{
+    padding:100px 10%;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.project-card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    transition:0.3s;
+     display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:0.3s;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.project-card:hover img{
+    transform:scale(1.03);
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    margin-bottom:15px;
+}
+
+.project-content p{
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tech-stack span{
+    background:#0f172a;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:0.85rem;
+    border:1px solid rgba(255,255,255,0.1);
+}
+.title-line{
+    width:80px;
+    height:4px;
+
+    margin:15px auto;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #38bdf8,
+        #3b82f6
+    );
 }
